@@ -6,6 +6,39 @@
     <title>Pesquisa Culturama</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Pesquisa Online</h1>
+    </header>
+    <section>
+        <form action="" method="get">
+            <fieldset>
+                <!-- DADOS PESSOAIS -->
+
+                <legend>Dados Pessoais</legend>
+                <label for="userName">Nome</label>
+                <input type="text" name="userName" required> <!--name é ao que irá atribuir na URL do HTML por conta da solicitação do "get" no method do form // Já o "required" é um atributo que não recebe valor, é apenas para denominar um input que deve ser preenchido obrigatóriamente-->
+                <br>
+                <label for="userAge">Idade</label>
+                <input type="number" name="userAge" min="12" max="100" required> <!-- Para estimular um minimo ou máximo de idade ou de algum outro requisito, podemos utilizar os atributos "min" ou "max" com os valores que queremos passar após o = -->
+                <br>
+                <label for="birthDate">Data de nascimento</label>
+                <input type="date" name="birthDate">
+                <br>
+                <label for="userEmail">Email</label>
+                <input type="email" name="userEmail" required>
+                <br>
+                <label for="userPhoneNumber">Telefone</label>
+                <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD + 999999999"> <!-- "tel" é um valor de atributo especifico para receber um telefone como input. // O atributo "pattern" serve para denominar quais números ou digitos (representados dentro de [] sempre) e a quantidade que queremos que seja utilizada dentro do input (representado por {} sempre) -->
+                <br>
+                <label for="userImage">Upload de foto</label>
+                <input type="file" accept="image/*" name="userImage"> <!-- o "type=file" solicita um arquivo no input // o o "accept" diz qual o tipo de arquivo será aceito, o "image/*" indica que será aceito qualquer tipo de formatos de images.
+                -->
+            </fieldset>
+            
+            
+            <br>
+            <button type="submit">Enviar</button> <!--Type escolhe o tipo do button. O submit significa que ele irá submeter as respostas aos inputs-->
+        </form>
+    </section>    
 </body>
 </html>
